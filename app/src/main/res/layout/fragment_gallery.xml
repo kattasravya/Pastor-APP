@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GalleryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar"
+        android:background="@drawable/bg"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/arrow"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/back_arrow"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/arrow"
+            android:text="Gallery"
+            app:layout_constraintEnd_toStartOf="@id/edit_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/arrow"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="30dp"
+            android:cropToPadding="true"
+            android:id="@+id/edit_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/edit_note"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:id="@+id/gallery_banner"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        android:background="@drawable/gallery_bg"
+        android:layout_height="106dp">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_gallery"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/custom_gallery_layout"
+        app:layout_constraintTop_toBottomOf="@id/gallery_banner"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

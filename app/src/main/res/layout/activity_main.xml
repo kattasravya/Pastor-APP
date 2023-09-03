@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/backgroundss"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="15dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="15dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@id/subtitle_text"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/montserrat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Lorem Ipsum has been the industry's standard"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="21dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:fontFamily="@font/montserrat" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_lyt"
+        android:layout_width="0dp"
+        android:layout_height="355dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_drawable"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_text">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Full Name"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:fontFamily="@font/montserrat" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lyt_name"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_full_name">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:background="@drawable/drawable_edittext"
+                android:gravity="fill"
+                android:paddingStart="10dp"
+                android:hint="Full Name"
+                android:textColor="@color/white"
+                android:textColorHint="#5EFFFFFF"
+                android:textFontWeight="500"
+                android:textSize="21dp"
+                tools:fontFamily="@font/montserrat" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_mobilenumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Mobile Number"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lyt_name"
+            tools:fontFamily="@font/montserrat" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lyt_number"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_mobilenumber">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/drawable_edittext"
+                android:gravity="fill"
+                android:hint="+91 9912333345"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="#5EFFFFFF"
+                android:textFontWeight="500"
+                android:textSize="21dp"
+                tools:fontFamily="@font/montserrat" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Email id"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lyt_number"
+            tools:fontFamily="@font/montserrat" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_email">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/drawable_edittext"
+                android:gravity="fill"
+                android:hint="+91 9912333345"
+                android:textColor="@color/white"
+                android:paddingStart="10dp"
+                android:layout_margin="8dp"
+                android:textColorHint="#5EFFFFFF"
+                android:textFontWeight="500"
+                android:textSize="21dp"
+                tools:fontFamily="@font/montserrat" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#B11E22"
+        android:gravity="center"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/constraint_lyt"
+        tools:fontFamily="@font/montserrat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
